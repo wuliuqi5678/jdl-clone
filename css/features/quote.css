@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Feature: freight estimator
+   ========================================================================== */
+
+.modal__dialog--quote {
+  width: min(760px, 100%);
+  max-height: calc(100vh - 24px);
+  padding: 30px 30px 24px;
+  overflow: auto;
+}
+
+#quoteForm .form-grid {
+  gap: 12px 14px;
+}
+
+.quote-result {
+  margin-top: 18px;
+  padding: 20px;
+  background: #f8f8fa;
+  border: 1px solid #eef0f4;
+  border-radius: 10px;
+}
+
+.quote-result[hidden] {
+  display: none;
+}
+
+.quote-result__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.quote-result__head span {
+  color: #5f626a;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.quote-result__head strong {
+  color: var(--red);
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.quote-result__meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 0;
+}
+
+.quote-result__meta dt {
+  margin: 0 0 2px;
+  color: #5f626a;
+  font-size: 9.5px;
+}
+
+.quote-result__meta dd {
+  margin: 0;
+  color: #303239;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.quote-result__note {
+  margin-top: 15px;
+  color: #5f626a;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.quote-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.quote-result__actions .btn {
+  min-height: 36px;
+  font-size: 11px;
+}
+
+.quote-disclaimer {
+  margin-top: 16px;
+  color: #5f626a;
+  font-size: 9.5px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .modal__dialog--quote {
+    padding: 26px 20px 20px;
+  }
+
+  .quote-result {
+    padding: 16px;
+  }
+
+  .quote-result__head strong {
+    font-size: 25px;
+  }
+
+  .quote-result__meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .quote-result__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-result__actions .btn {
+    width: 100%;
+  }
+}

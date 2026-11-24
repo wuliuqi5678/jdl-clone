@@ -1,0 +1,305 @@
+  <div class="float-rail" aria-label="快捷工具栏">
+    <button class="rail-btn rail-btn--red" type="button" data-consult aria-label="合作咨询">
+      <svg class="icon"><use href="#i-headset"></use></svg>
+      <span class="rail-label">合作咨询</span>
+    </button>
+    <button class="rail-btn" type="button" data-quote-open aria-label="运费估算">
+      <svg class="icon"><use href="#i-chart"></use></svg>
+      <span class="rail-label">运费估算</span>
+    </button>
+    <button class="rail-btn" type="button" data-qr="qiwei-float" aria-label="企业微信二维码">
+      <svg class="icon"><use href="#i-qr"></use></svg>
+      <span class="rail-label">企业微信</span>
+    </button>
+    <a class="rail-btn" href="contact.html" aria-label="联系我们">
+      <svg class="icon"><use href="#i-phone"></use></svg>
+      <span class="rail-label">联系我们</span>
+    </a>
+    <button class="rail-btn rail-btn--top" type="button" aria-label="回到顶部">
+      <svg class="icon"><use href="#i-up"></use></svg>
+    </button>
+  </div>
+
+  <button class="mobile-consult" type="button" data-consult>合作咨询</button>
+
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__scrim" data-menu-close></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="移动端导航">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--drawer" href="index.html" data-menu-close><img src="assets/img/logo.png" width="150" height="25" alt="JDL 京东物流"></a>
+        <button class="drawer-close" type="button" aria-label="关闭菜单" data-menu-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      </div>
+      <nav aria-label="移动端主导航">
+        <a class="drawer-link" href="index.html" data-menu-close>首页 <svg class="icon icon--xs"><use href="#i-arrow-right"></use></svg></a>
+        <button class="drawer-link drawer-action" type="button" data-search-open data-menu-close>搜索全站 <svg class="icon icon--xs"><use href="#i-search"></use></svg></button>
+        <div class="drawer-group">
+          <button class="drawer-link drawer-toggle" type="button" aria-expanded="false">服务与产品 <svg class="icon icon--xs"><use href="#i-chevron-down"></use></svg></button>
+          <div class="drawer-sub">
+            <a href="express.html" data-menu-close>快递快运服务</a>
+            <a href="supply-chain.html" data-menu-close>仓配一体服务</a>
+            <a href="services.html#bulky" data-menu-close>大件服务</a>
+            <a href="services.html#coldchain" data-menu-close>冷链服务</a>
+            <a href="services.html#global" data-menu-close>国际物流</a>
+          </div>
+        </div>
+        <div class="drawer-group">
+          <button class="drawer-link drawer-toggle" type="button" aria-expanded="false">解决方案 <svg class="icon icon--xs"><use href="#i-chevron-down"></use></svg></button>
+          <div class="drawer-sub">
+            <a href="consumer-goods.html" data-menu-close>快消行业</a>
+            <a href="apparel.html" data-menu-close>服装行业</a>
+            <a href="appliance.html" data-menu-close>家电行业</a>
+            <a href="digital.html" data-menu-close>3C 行业</a>
+            <a href="auto.html" data-menu-close>汽车行业</a>
+            <a href="fresh.html" data-menu-close>生鲜行业</a>
+          </div>
+        </div>
+        <div class="drawer-group">
+          <button class="drawer-link drawer-toggle" type="button" aria-expanded="false">服务支持 <svg class="icon icon--xs"><use href="#i-chevron-down"></use></svg></button>
+          <div class="drawer-sub">
+            <a href="index.html" data-track-open data-menu-close>运单查询</a>
+            <a href="contact.html#support" data-quote-open data-menu-close>运费时效查询</a>
+            <a href="contact.html#support" data-menu-close>网点查询</a>
+            <a href="contact.html" data-menu-close>在线客服</a>
+          </div>
+        </div>
+        <a class="drawer-link" href="esg.html" data-menu-close>可持续发展 <svg class="icon icon--xs"><use href="#i-arrow-right"></use></svg></a>
+        <a class="drawer-link" href="about.html" data-menu-close>关于京东物流 <svg class="icon icon--xs"><use href="#i-arrow-right"></use></svg></a>
+      </nav>
+      <div class="mobile-drawer__foot">
+        <a class="btn btn--primary" href="index.html" data-track-open data-menu-close>查快递</a>
+        <a class="btn btn--ghost" href="contact.html" data-consult data-menu-close>合作咨询</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="trackModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="trackModalTitle">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--track">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">WAYBILL TRACKING</p>
+      <h2 id="trackModalTitle">运单查询结果</h2>
+      <p class="modal__lead">以下为演示数据，仅用于展示页面交互，不会查询真实物流信息。</p>
+      <div class="track-result">
+        <div class="track-result__head">
+          <div>
+            <span>运单号</span>
+            <strong id="trackNumber">JDVA00000000000</strong>
+          </div>
+          <span class="status-pill">运输中</span>
+        </div>
+        <div class="track-result__route">
+          <div><span>发货地</span><strong>北京 · 京东物流亚洲一号</strong></div>
+          <svg class="icon"><use href="#i-arrow-right"></use></svg>
+          <div><span>收货地</span><strong>上海 · 浦东新区</strong></div>
+        </div>
+        <ol class="timeline">
+          <li class="is-current"><span class="timeline__dot"></span><div><strong>运输中</strong><p>包裹已到达上海分拣中心，正在发往配送站</p><time>今天 09:42</time></div></li>
+          <li><span class="timeline__dot"></span><div><strong>已到达</strong><p>包裹已到达华东转运中心</p><time>昨天 22:16</time></div></li>
+          <li><span class="timeline__dot"></span><div><strong>已揽收</strong><p>京东小哥已揽收，准备发往分拣中心</p><time>昨天 18:20</time></div></li>
+        </ol>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--primary" type="button" data-modal-close>知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--login">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">JDL ACCOUNT</p>
+      <h2 id="loginModalTitle">登录京东物流</h2>
+      <p class="modal__lead">此登录框为课程作业演示，不连接真实账号系统。</p>
+      <form id="loginForm" novalidate>
+        <label class="field">
+          <span>手机号 / 账号</span>
+          <input type="text" name="account" autocomplete="username" placeholder="请输入手机号或账号">
+        </label>
+        <label class="field">
+          <span>验证码</span>
+          <span class="field__row">
+            <input type="text" name="code" inputmode="numeric" autocomplete="one-time-code" placeholder="请输入 6 位验证码">
+            <button class="code-btn" type="button" id="sendCode">获取验证码</button>
+          </span>
+        </label>
+        <p class="form-message" id="loginMessage" role="alert"></p>
+        <button class="btn btn--primary btn--block" type="submit">登录</button>
+        <p class="form-legal">登录即表示同意《服务细则》和《个人信息保护规则》（演示链接）</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="consultModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="consultModalTitle">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--consult">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">BUSINESS CONSULTATION</p>
+      <h2 id="consultModalTitle">合作咨询</h2>
+      <p class="modal__lead">留下您的需求，我们的物流顾问将尽快与您联系。<span>（演示表单，不会提交到真实系统）</span></p>
+      <form id="consultForm" novalidate>
+        <div class="form-grid">
+          <label class="field">
+            <span>您的称呼</span>
+            <input type="text" name="name" placeholder="请输入姓名">
+          </label>
+          <label class="field">
+            <span>联系电话</span>
+            <input type="tel" name="phone" inputmode="tel" placeholder="请输入手机号">
+          </label>
+        </div>
+        <label class="field">
+          <span>公司名称</span>
+          <input type="text" name="company" placeholder="请输入公司名称">
+        </label>
+        <label class="field">
+          <span>咨询方向</span>
+          <select name="topic">
+            <option>仓配一体服务</option>
+            <option>快递快运服务</option>
+            <option>大件 / 冷链服务</option>
+            <option>行业解决方案</option>
+            <option>国际物流服务</option>
+            <option>其他合作</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>需求描述 <small>选填</small></span>
+          <textarea name="message" rows="3" placeholder="简单描述您的业务场景与物流需求"></textarea>
+        </label>
+        <p class="form-message" id="consultMessage" role="alert"></p>
+        <button class="btn btn--primary btn--block" type="submit">提交咨询</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal--qr" id="qrModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="二维码">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--qr">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">SCAN TO CONNECT</p>
+      <h2 id="qrModalTitle">企业微信</h2>
+      <img id="qrModalImage" src="assets/img/qr-qiwei.png" alt="二维码" width="220" height="220">
+      <p class="qr-modal__note">扫码添加专属顾问</p>
+    </div>
+  </div>
+
+  <div class="modal modal--search" id="searchModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--search">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">SITE SEARCH</p>
+      <h2 id="searchModalTitle">搜索全站</h2>
+      <p class="modal__lead">搜索服务、行业方案、新闻与站点页面。仅检索本复刻站，不连接外部搜索引擎。</p>
+      <form class="site-search" id="siteSearchForm" role="search" novalidate>
+        <label class="site-search__field" for="siteSearchInput">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <span class="sr-only">搜索关键词</span>
+          <input type="search" id="siteSearchInput" name="q" placeholder="搜索服务、行业、新闻或页面" autocomplete="off" spellcheck="false" aria-describedby="searchHint">
+        </label>
+        <button class="btn btn--primary" type="submit">搜索</button>
+      </form>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span>热门搜索</span>
+        <button type="button" data-search-suggestion="京东特快">京东特快</button>
+        <button type="button" data-search-suggestion="冷链">冷链</button>
+        <button type="button" data-search-suggestion="ESG">ESG</button>
+        <button type="button" data-search-suggestion="新闻">新闻</button>
+      </div>
+      <p class="site-search__hint" id="searchHint">按 Ctrl/⌘ + K 随时打开 · 输入标题或关键词</p>
+      <p class="site-search__summary" id="searchSummary" aria-live="polite"></p>
+      <div class="search-results" id="searchResults" role="list"></div>
+      <p class="search-empty" id="searchEmpty" hidden>没有找到匹配页面，试试“京东特快”“冷链”或“ESG”。</p>
+      <p class="site-search__disclaimer">搜索结果来自本复刻站的静态页面索引，仅用于课程作业演示。</p>
+    </div>
+  </div>
+
+  <div class="modal modal--quote" id="quoteModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal__scrim" data-modal-close></div>
+    <div class="modal__dialog modal__dialog--quote">
+      <button class="modal__close" type="button" aria-label="关闭" data-modal-close><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="modal__eyebrow">FREIGHT ESTIMATOR</p>
+      <h2 id="quoteModalTitle">运费与时效估算</h2>
+      <p class="modal__lead">选择产品、城市和货物信息，获得演示估算结果。实际价格与时效以物流顾问确认为准。</p>
+      <form id="quoteForm" novalidate>
+        <div class="form-grid">
+          <label class="field">
+            <span>始发城市</span>
+            <select name="origin">
+              <option value="北京">北京</option>
+              <option value="上海">上海</option>
+              <option value="广州">广州</option>
+              <option value="深圳">深圳</option>
+              <option value="成都">成都</option>
+              <option value="武汉">武汉</option>
+              <option value="杭州">杭州</option>
+              <option value="西安">西安</option>
+              <option value="南京">南京</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>目的城市</span>
+            <select name="destination">
+              <option value="上海">上海</option>
+              <option value="北京">北京</option>
+              <option value="广州">广州</option>
+              <option value="深圳">深圳</option>
+              <option value="成都">成都</option>
+              <option value="武汉">武汉</option>
+              <option value="杭州">杭州</option>
+              <option value="西安">西安</option>
+              <option value="南京">南京</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label class="field">
+            <span>产品类型</span>
+            <select name="product">
+              <option value="fastest">京东特快</option>
+              <option value="standard" selected>京东标快</option>
+              <option value="freight">重货标快</option>
+              <option value="vehicle">整车直达</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>计费重量（kg）</span>
+            <input type="number" name="weight" inputmode="decimal" min="1" max="5000" step="1" value="10">
+          </label>
+        </div>
+        <div class="form-grid">
+          <label class="field">
+            <span>体积（m³，选填）</span>
+            <input type="number" name="volume" inputmode="decimal" min="0" step="0.01" placeholder="例如 0.2">
+          </label>
+          <label class="field">
+            <span>声明价值（元，选填）</span>
+            <input type="number" name="value" inputmode="decimal" min="0" step="100" placeholder="用于保价演示">
+          </label>
+        </div>
+        <p class="form-message" id="quoteMessage" role="alert"></p>
+        <button class="btn btn--primary btn--block" type="submit">估算运费与时效</button>
+      </form>
+      <div class="quote-result" id="quoteResult" hidden>
+        <div class="quote-result__head">
+          <span>演示估算结果</span>
+          <strong id="quotePrice">¥ --</strong>
+        </div>
+        <dl class="quote-result__meta">
+          <div><dt>预计时效</dt><dd id="quoteEta">--</dd></div>
+          <div><dt>计费重量</dt><dd id="quoteWeight">--</dd></div>
+          <div><dt>产品</dt><dd id="quoteProduct">--</dd></div>
+        </dl>
+        <p class="quote-result__note" id="quoteNote">结果仅为课程作业演示，不构成真实报价。</p>
+        <div class="quote-result__actions">
+          <button class="btn btn--ghost" type="button" data-quote-reset>重新估算</button>
+          <a class="btn btn--primary" href="contact.html">联系顾问确认</a>
+        </div>
+      </div>
+      <p class="quote-disclaimer">本估算器不会发送数据，所有价格、时效均为本地演示计算。</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  
