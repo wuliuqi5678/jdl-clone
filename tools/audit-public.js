@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const base = (process.argv[2] || 'https://deep-coil-keen-pan-rmxdiect3cboytjva.paged.net/').replace(/\/?$/, '/');
+const base = (process.argv[2] || 'https://wuliuqi5678.github.io/jdl-clone/').replace(/\/?$/, '/');
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
