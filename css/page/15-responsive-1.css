@@ -1,0 +1,46 @@
+@media (max-width: 1120px) {
+  .process-layout {
+    gap: 35px;
+  }
+
+  .adv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .adv-card {
+    min-height: 210px;
+  }
+
+  .industry-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-family-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .related-grid {
+    gap: 14px;
+  }
+
+  .article-shell {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 34px;
+  }
+
+  .about-intro {
+    gap: 32px;
+  }
+
+  .contact-grid {
+    gap: 30px;
+  }
+
+  .contact-form-card {
+    padding: 26px 24px;
+  }
+
+  .support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

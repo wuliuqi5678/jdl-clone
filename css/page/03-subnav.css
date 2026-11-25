@@ -1,0 +1,56 @@
+/* --------------------------------------------------------------------------
+   Sticky in-page sub-navigation
+   -------------------------------------------------------------------------- */
+
+.page-subnav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 48;
+  background: rgba(255, 255, 255, .97);
+  border-bottom: 1px solid #eceef2;
+  box-shadow: 0 7px 22px rgba(19, 22, 31, .035);
+  backdrop-filter: blur(10px);
+}
+
+.page-subnav__inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(25px, 4.6vw, 60px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.page-subnav__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.page-subnav a {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 18px 1px 17px;
+  color: #696d76;
+  font-size: 12.5px;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.page-subnav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: transparent;
+  transition: background .2s ease;
+}
+
+.page-subnav a:hover,
+.page-subnav a.is-active {
+  color: var(--red);
+}
+
+.page-subnav a.is-active::after {
+  background: var(--red);
+}
+

@@ -1,0 +1,125 @@
+/* --------------------------------------------------------------------------
+   Floating rail
+   -------------------------------------------------------------------------- */
+
+.float-rail {
+  position: fixed;
+  top: 52%;
+  right: 17px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+  transform: translateY(-50%);
+}
+
+.rail-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  color: #4c4e55;
+  background: #fff;
+  border: 1px solid #ebecf0;
+  border-radius: 50%;
+  box-shadow: 0 5px 17px rgba(23, 24, 29, .1);
+  transition: color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.rail-btn:hover {
+  color: var(--red);
+  transform: translateY(-2px);
+}
+
+.rail-btn .icon {
+  width: 19px;
+  height: 19px;
+}
+
+.rail-btn--red {
+  color: #fff;
+  background: linear-gradient(145deg, #fb5b4b, #e1251b);
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(225, 37, 27, .28);
+}
+
+.rail-btn--red:hover {
+  color: #fff;
+  background: linear-gradient(145deg, #ff6859, #cc1c14);
+}
+
+.rail-label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 9px);
+  display: inline-flex;
+  align-items: center;
+  min-height: 31px;
+  padding: 0 11px;
+  color: #fff;
+  background: rgba(31, 33, 39, .94);
+  border-radius: 4px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, .15);
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(5px, -50%);
+  transition: .2s ease;
+  pointer-events: none;
+}
+
+.rail-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: rgba(31, 33, 39, .94);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.rail-btn:hover .rail-label,
+.rail-btn:focus-visible .rail-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -50%);
+}
+
+.rail-btn--top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(7px);
+}
+
+.rail-btn--top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+
+.mobile-consult {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 108px;
+  z-index: 55;
+  display: none;
+  padding: 13px 7px;
+  color: var(--red);
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid #efd7d4;
+  border-right: 0;
+  border-radius: 7px 0 0 7px;
+  box-shadow: 0 4px 14px rgba(30, 30, 35, .1);
+  font-size: 11px;
+  line-height: 1.15;
+  writing-mode: vertical-rl;
+  letter-spacing: 2px;
+}
+

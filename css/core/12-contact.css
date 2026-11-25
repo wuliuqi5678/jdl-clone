@@ -1,0 +1,211 @@
+/* --------------------------------------------------------------------------
+   Contact band
+   -------------------------------------------------------------------------- */
+
+.contact {
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(circle at 76% 30%, rgba(225, 37, 27, .1), transparent 28%),
+    #1b1d22;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, .018) 1px, transparent 1px);
+  background-size: 100% 12px;
+  pointer-events: none;
+  opacity: .28;
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr auto;
+  align-items: center;
+  gap: 54px;
+  min-height: 151px;
+  padding-block: 25px;
+}
+
+.contact__eyebrow {
+  margin-bottom: 3px;
+  color: rgba(255, 255, 255, .75);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+}
+
+.contact__copy h2 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .4px;
+}
+
+.contact__phone {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: max-content;
+  margin-top: 4px;
+  color: #fff;
+  transition: color .2s ease;
+}
+
+.contact__phone:hover {
+  color: #ff8579;
+}
+
+.contact__phone .icon {
+  width: 27px;
+  height: 27px;
+  stroke-width: 1.65;
+}
+
+.contact__phone span {
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 1.2px;
+}
+
+.contact__note {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .75);
+  font-size: 10.5px;
+}
+
+.contact__channels {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.qr-channel {
+  position: relative;
+}
+
+.qr-channel__button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(255, 255, 255, .78);
+  font-size: 10px;
+  transition: color .2s ease;
+}
+
+.qr-channel__button:hover {
+  color: #fff;
+}
+
+.qr-channel__icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  opacity: .78;
+}
+
+.qr-channel__icon img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.qr-pop {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  z-index: 15;
+  width: 174px;
+  padding: 12px 12px 10px;
+  color: #333;
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 15px 38px rgba(0, 0, 0, .25);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 6px);
+  transition: .2s ease;
+}
+
+.qr-pop::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.qr-channel:hover .qr-pop,
+.qr-channel:focus-within .qr-pop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.qr-pop img {
+  width: 146px;
+  height: 146px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.qr-pop p {
+  margin-top: 5px;
+  color: #777a82;
+  font-size: 10px;
+}
+
+.contact__actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 126px;
+}
+
+.btn--light-outline {
+  width: 100%;
+  min-height: 38px;
+  color: rgba(255, 255, 255, .9);
+  border: 1px solid rgba(255, 255, 255, .24);
+  background: rgba(255, 255, 255, .045);
+  border-radius: 4px;
+  font-size: 11.5px;
+}
+
+.btn--light-outline:hover {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .75);
+}
+
+.contact__online {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, .75);
+  font-size: 10px;
+  transition: color .2s ease;
+}
+
+.contact__online:hover {
+  color: #fff;
+}
+
+.contact__online .icon {
+  width: 13px;
+  height: 13px;
+}
+

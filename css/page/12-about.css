@@ -1,0 +1,361 @@
+/* --------------------------------------------------------------------------
+   About
+   -------------------------------------------------------------------------- */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 48px;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.about-video {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.68;
+  background: #202733;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(28, 32, 43, .11);
+}
+
+.about-video video,
+.about-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-video__badge {
+  position: absolute;
+  right: 14px;
+  bottom: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  color: #fff;
+  background: rgba(17, 22, 30, .54);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 100px;
+  font-size: 8.5px;
+  backdrop-filter: blur(7px);
+}
+
+.about-video__badge .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.about-text h2 {
+  color: #292b31;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.2px;
+}
+
+.about-text p {
+  margin-top: 14px;
+  color: #7f828a;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.about-text .about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #eceef2;
+}
+
+.about-stats div strong {
+  display: block;
+  color: var(--red);
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.about-stats div span {
+  color: var(--muted-light);
+  font-size: 9.5px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 33px;
+}
+
+.mission-card {
+  padding: 27px 22px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 11px;
+  box-shadow: 0 9px 24px rgba(26, 30, 41, .035);
+}
+
+.mission-card__icon {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 10px;
+  background: radial-gradient(circle, #fff5f2, transparent 68%);
+  border-radius: 50%;
+}
+
+.mission-card__icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.mission-card__body {
+  min-width: 0;
+}
+
+.mission-card h3 {
+  color: #36383e;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mission-card p {
+  margin-top: 7px;
+  color: var(--muted-light);
+  font-size: 10.5px;
+  line-height: 1.8;
+}
+
+.sustainability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.sustain-card {
+  position: relative;
+  min-height: 219px;
+  overflow: hidden;
+  color: #fff;
+  background: #272b33;
+  border-radius: 8px;
+  isolation: isolate;
+}
+
+.sustain-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s var(--ease);
+}
+
+.sustain-card:hover img {
+  transform: scale(1.04);
+}
+
+.sustain-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(14, 19, 25, .84), rgba(14, 19, 25, .05) 68%);
+}
+
+.sustain-card__content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 19px 20px;
+}
+
+.sustain-card__content h3 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sustain-card__content p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .64);
+  font-size: 9.5px;
+  line-height: 1.7;
+}
+
+.company-timeline {
+  margin-top: 34px;
+  padding: 35px 36px 31px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+.timeline-years {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 19px 0 30px;
+}
+
+.timeline-years::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  right: 8px;
+  left: 8px;
+  height: 1px;
+  background: #dedfe4;
+}
+
+.timeline-year {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  color: var(--muted-light);
+  font-size: 11px;
+  transition: color .2s ease;
+}
+
+.timeline-year::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #d2d4d9;
+  border: 2px solid #f8f8fa;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #d2d4d9;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.timeline-year:hover,
+.timeline-year.is-active {
+  color: var(--red);
+}
+
+.timeline-year.is-active::before {
+  background: var(--red);
+  box-shadow: 0 0 0 1px var(--red), 0 0 0 5px rgba(225, 37, 27, .1);
+}
+
+.timeline-panel {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 30px;
+  align-items: stretch;
+  padding-top: 22px;
+  border-top: 1px solid #e7e8ec;
+}
+
+.timeline-panel__media {
+  overflow: hidden;
+  min-height: 205px;
+  border-radius: 7px;
+  background: #e9ebef;
+}
+
+.timeline-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-panel__body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 450px;
+}
+
+.timeline-panel__body span {
+  color: var(--red);
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 12px;
+  letter-spacing: .4px;
+}
+
+.timeline-panel__body h3 {
+  margin-top: 6px;
+  color: #34363c;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.timeline-panel__body p {
+  margin-top: 8px;
+  color: var(--muted-light);
+  font-size: 11.5px;
+  line-height: 1.9;
+}
+
+.other-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 31px;
+}
+
+.other-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 216px;
+  overflow: hidden;
+  color: #fff;
+  background: #1d222b;
+  border-radius: 9px;
+  isolation: isolate;
+}
+
+.other-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.other-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(13, 18, 25, .8), rgba(13, 18, 25, .05));
+}
+
+.other-card__content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.other-card h3 {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.other-card p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .6);
+  font-size: 9.5px;
+}
+
+.other-card .link-arrow {
+  margin-top: 11px;
+  color: rgba(255, 255, 255, .82);
+}
+

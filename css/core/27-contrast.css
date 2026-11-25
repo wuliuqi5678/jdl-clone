@@ -1,0 +1,43 @@
+/* --------------------------------------------------------------------------
+   Accessibility contrast and small-screen refinements
+   -------------------------------------------------------------------------- */
+
+.industry-kicker {
+  color: rgba(255, 255, 255, .78);
+}
+
+.news-card:first-child .news-card__content time {
+  color: rgba(255, 255, 255, .82);
+}
+
+/* Keep the floating rail clear of the 1200px content column on smaller screens. */
+@media (max-width: 1360px) {
+  .float-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-heading {
+    gap: 8px;
+  }
+
+  .section-heading h2 {
+    font-size: 20px;
+    letter-spacing: .1px;
+  }
+
+  .section-heading__line {
+    display: none;
+  }
+
+  .mobile-consult {
+    display: none;
+  }
+}.status-pill,
+.code-btn,
+.timeline li.is-current strong {
+  color: #b71c13;
+}#main:focus {
+  outline: none;
+}

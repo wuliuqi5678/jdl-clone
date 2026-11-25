@@ -1,0 +1,195 @@
+/* --------------------------------------------------------------------------
+   Industry solution pages
+   -------------------------------------------------------------------------- */
+
+.industry-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 55px;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.industry-intro__media {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #eff0f3;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(27, 32, 43, .045);
+}
+
+.industry-intro__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.industry-quote {
+  position: relative;
+  padding: 12px 0 0 24px;
+  color: #676b74;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.industry-quote::before {
+  content: "“";
+  position: absolute;
+  top: -27px;
+  left: -2px;
+  color: rgba(225, 37, 27, .13);
+  font-family: Georgia, serif;
+  font-size: 86px;
+  line-height: 1;
+}
+
+.industry-quote strong {
+  display: block;
+  margin-bottom: 9px;
+  color: #35373d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.industry-quote p + p {
+  margin-top: 10px;
+}
+
+.industry-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 17px;
+  color: var(--muted-light);
+  border-top: 1px solid #eef0f4;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.industry-note .icon {
+  width: 15px;
+  height: 15px;
+  color: var(--red);
+  flex: 0 0 auto;
+}
+
+.scenario-panel {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  margin-top: 35px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  box-shadow: 0 12px 34px rgba(25, 30, 42, .05);
+}
+
+.scenario-panel__media {
+  min-height: 310px;
+  background: #e9ecf1;
+}
+
+.scenario-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scenario-panel__body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px 37px;
+}
+
+.scenario-panel__body h3 {
+  color: #2c2f36;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.scenario-panel__body > p {
+  margin-top: 10px;
+  color: var(--muted-light);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.check-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 19px;
+  color: #62656d;
+  font-size: 11.5px;
+  line-height: 1.8;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 7px;
+  height: 4px;
+  border-bottom: 1px solid var(--red);
+  border-left: 1px solid var(--red);
+  transform: rotate(-45deg);
+}
+
+.industry-capabilities {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.capability-card {
+  padding: 22px 19px;
+  background: #fff;
+  border: 1px solid #f0f1f4;
+  border-radius: 10px;
+  transition: transform .25s var(--ease), box-shadow .25s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(26, 30, 41, .065);
+}
+
+.capability-card__icon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: #fff6f4;
+}
+
+.capability-card__icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.capability-card h3 {
+  color: #35373d;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.capability-card p {
+  margin-top: 5px;
+  color: var(--muted-light);
+  font-size: 10px;
+  line-height: 1.75;
+}
+

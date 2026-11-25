@@ -1,0 +1,135 @@
+/* --------------------------------------------------------------------------
+   Page CTA before footer
+   -------------------------------------------------------------------------- */
+
+.page-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(225, 37, 27, .08), transparent 30%),
+    #f6f7fa;
+  border-top: 1px solid #eef0f3;
+}
+
+.page-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 126px;
+  padding: 23px 0;
+}
+
+.page-cta__brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-cta__brand img {
+  width: 132px;
+  height: auto;
+}
+
+.page-cta__brand .page-cta__divider {
+  width: 1px;
+  height: 35px;
+  background: #dfe2e8;
+}
+
+.page-cta__slogan {
+  color: var(--muted-light);
+  font-size: 10.5px;
+}
+
+.page-cta__slogan strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #4d5058;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.page-cta__right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.page-cta__phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b4e55;
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 24px;
+  letter-spacing: .6px;
+}
+
+.page-cta__phone .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--red);
+}
+
+.page-cta__phone em {
+  color: var(--muted-light);
+  font-family: var(--font);
+  font-size: 9.5px;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.page-cta__btn {
+  min-width: 136px;
+}
+
+.page-cta--media {
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(20, 26, 35, .88), rgba(20, 26, 35, .55) 55%, rgba(20, 26, 35, .3)),
+    url("../../assets/pages/consumer-cta.jpg") center 47% / cover no-repeat;
+  border-top: 0;
+}
+
+.page-cta--media .page-cta__inner {
+  min-height: 198px;
+}
+
+.page-cta--media .page-cta__eyebrow {
+  color: rgba(255, 255, 255, .75);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+.page-cta--media h2 {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 550;
+  letter-spacing: .5px;
+}
+
+.page-cta--media p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .6);
+  font-size: 10.5px;
+}
+
+.page-cta--media .page-cta__right {
+  align-self: center;
+}
+
+.page-cta--media .page-cta__phone {
+  color: #fff;
+}
+
+.page-cta--media .page-cta__phone .icon {
+  color: #ff7565;
+}
+
+.page-cta--media .page-cta__phone em {
+  color: rgba(255, 255, 255, .75);
+}
+

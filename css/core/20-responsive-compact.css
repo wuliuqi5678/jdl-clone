@@ -1,0 +1,146 @@
+/* --------------------------------------------------------------------------
+   Responsive — compact desktop
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1280px) {
+  .container {
+    width: min(var(--container), calc(100% - 56px));
+  }
+
+  .primary-nav {
+    margin-left: 34px;
+  }
+
+  .nav-link {
+    padding-inline: 18px;
+  }
+
+  .brand img {
+    width: 162px;
+  }
+
+  .hero-panel {
+    margin-inline: 0;
+  }
+
+  .quick-link {
+    padding-inline: 10px;
+  }
+
+  .quick-link__icon {
+    width: 48px;
+    height: 48px;
+    background-size: 1008px 48px;
+  }
+
+  .quick-link__text {
+    font-size: 12px;
+  }
+
+  .news-layout {
+    grid-template-columns: minmax(0, 1fr) 168px;
+  }
+
+  .news-actions {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 1120px) {
+  :root {
+    --header-h: 66px;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+
+  .nav-tools {
+    display: flex;
+  }
+
+  .nav-tool--menu {
+    display: grid;
+  }
+
+  .brand img {
+    width: 166px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .hero {
+    height: 560px;
+  }
+
+  .hero-copy {
+    padding-top: 90px;
+  }
+
+  .hero-panel-wrap {
+    width: calc(100% - 56px);
+  }
+
+  .track-form {
+    flex-basis: 370px;
+  }
+
+  .quick-link__icon {
+    width: 44px;
+    height: 44px;
+    background-size: 924px 44px;
+  }
+
+  .quick-link__text small {
+    display: none;
+  }
+
+  .service-tab {
+    flex-basis: calc(100% / 5);
+  }
+
+  .service-panel {
+    grid-template-columns: 1.18fr .82fr;
+    padding-inline: 30px;
+  }
+
+  .service-panel__visual img {
+    width: 120%;
+    right: -10px;
+  }
+
+  .network-badge {
+    width: 92px;
+    height: 92px;
+    font-size: 9.5px;
+  }
+
+  .network-badge__icon img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .news-grid {
+    gap: 12px;
+  }
+
+  .news-actions > p {
+    font-size: 12px;
+  }
+
+  .contact__inner {
+    gap: 30px;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .contact__channels {
+    gap: 24px;
+  }
+
+  .footer-columns {
+    gap: 20px;
+  }
+}
+

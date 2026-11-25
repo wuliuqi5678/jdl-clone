@@ -1,0 +1,107 @@
+/* --------------------------------------------------------------------------
+   Top bar
+   -------------------------------------------------------------------------- */
+
+.topbar {
+  height: 32px;
+  color: rgba(255, 255, 255, .68);
+  background: #222429;
+  font-size: 11.5px;
+  letter-spacing: .2px;
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  height: 100%;
+}
+
+.topbar__left,
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topbar a,
+.lang__trigger {
+  color: rgba(255, 255, 255, .68);
+  transition: color .2s ease;
+}
+
+.topbar a:hover,
+.lang__trigger:hover {
+  color: #fff;
+}
+
+.topbar__sep {
+  width: 1px;
+  height: 10px;
+  background: rgba(255, 255, 255, .16);
+}
+
+.topbar__login {
+  color: rgba(255, 255, 255, .82) !important;
+}
+
+.lang {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.lang__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+}
+
+.lang__trigger .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.lang__menu {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  z-index: 30;
+  min-width: 108px;
+  padding: 7px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 6px);
+  transition: .2s ease;
+}
+
+.lang.is-open .lang__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.lang__menu button {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  text-align: left;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.lang__menu button:hover,
+.lang__menu button.is-current {
+  color: var(--red);
+  background: #fff5f4;
+}
+

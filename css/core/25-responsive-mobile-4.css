@@ -1,0 +1,56 @@
+@media (max-width: 390px) {
+  .quick-link__icon {
+    width: 40px;
+    height: 40px;
+    background-size: 840px 40px;
+  }
+
+  .quick-link__text {
+    font-size: 9.5px;
+  }
+
+  .hero-slides {
+    height: 320px;
+  }
+
+  .hero-dots {
+    top: 282px;
+  }
+
+  .hero-panel-wrap {
+    margin-top: -20px;
+  }
+
+  .service-panel__visual {
+    min-height: 205px;
+  }
+
+  .service-features,
+  .industry-features {
+    grid-template-columns: 1fr;
+  }
+
+  .network-badge {
+    width: 61px;
+    height: 61px;
+    font-size: 7.5px;
+  }
+
+  .network-badge__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .network-badge__icon img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .news-card:first-child {
+    height: 305px;
+  }
+
+  .footer-column__title {
+    font-size: 12px;
+  }
+}

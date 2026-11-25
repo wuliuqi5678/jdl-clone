@@ -1,0 +1,238 @@
+/* --------------------------------------------------------------------------
+   Responsive — tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 920px) {
+  .container {
+    width: calc(100% - 44px);
+  }
+
+  .hero {
+    height: 515px;
+  }
+
+  .hero h1,
+  .hero-copy h2 {
+    font-size: 38px;
+  }
+
+  .hero-copy {
+    padding-top: 76px;
+  }
+
+  .hero-panel-wrap {
+    width: calc(100% - 44px);
+  }
+
+  .hero-panel {
+    min-height: 88px;
+    padding: 8px;
+  }
+
+  .track-form {
+    flex-basis: 320px;
+    padding-inline: 12px;
+  }
+
+  .track-form__label {
+    margin-bottom: 4px;
+  }
+
+  .quick-link {
+    flex-direction: column;
+    gap: 0;
+    padding-inline: 4px;
+    text-align: center;
+  }
+
+  .quick-link__icon {
+    width: 46px;
+    height: 46px;
+    background-size: 966px 46px;
+  }
+
+  .quick-link__text {
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 76px 0 72px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .services {
+    padding-top: 90px;
+  }
+
+  .service-tab {
+    flex-basis: calc(100% / 4);
+  }
+
+  .service-panel {
+    display: block;
+    min-height: 0;
+    padding: 30px;
+  }
+
+  .service-panel__content {
+    padding-right: 0;
+  }
+
+  .service-panel__visual {
+    min-height: 250px;
+    margin-top: 15px;
+  }
+
+  .service-panel__visual img {
+    right: 50%;
+    bottom: -36px;
+    width: min(520px, 95%);
+    transform: translateX(50%);
+  }
+
+  .service-panel__halo {
+    right: 50%;
+    bottom: -4%;
+    width: min(480px, 90%);
+    transform: translateX(50%) rotate(-8deg);
+  }
+
+  .industries {
+    min-height: 0;
+    padding: 64px 0 46px;
+  }
+
+  .industry-content {
+    margin-top: 36px;
+  }
+
+  .industry-tabs {
+    margin-top: 36px;
+  }
+
+  .industry-tab {
+    height: 68px;
+    font-size: 12px;
+  }
+
+  .industry-tab.is-active {
+    gap: 4px;
+  }
+
+  .industry-tab__icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .industry-tab__icon img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .industry-tab__more {
+    display: none !important;
+  }
+
+  .network-body {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .network-stats {
+    max-width: none;
+  }
+
+  .network-visual {
+    min-height: 330px;
+    margin-top: 10px;
+  }
+
+  .network-orb {
+    right: 50%;
+    bottom: 1%;
+    width: min(430px, 82%);
+    transform: translateX(50%);
+  }
+
+  .network-badges {
+    bottom: 15px;
+  }
+
+  .network-badge {
+    width: 96px;
+    height: 96px;
+  }
+
+  .news-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .news-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .news-actions__eyebrow,
+  .news-actions > p {
+    display: none;
+  }
+
+  .pill-link {
+    width: auto;
+    min-width: 125px;
+    margin: 0;
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-card {
+    aspect-ratio: 1.1;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr auto;
+    gap: 18px 30px;
+  }
+
+  .contact__actions {
+    grid-column: 2;
+    grid-row: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .contact__channels {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .btn--light-outline {
+    width: auto;
+    padding-inline: 17px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 24px;
+  }
+
+  .footer-brand__trust {
+    gap: 6px;
+  }
+
+  .footer-brand__trust img {
+    height: 20px;
+  }
+}
+

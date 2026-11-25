@@ -1,0 +1,40 @@
+/* ==========================================================================
+   JDL logistics — second and third level pages
+   Loaded after style.css on all standalone pages.
+   ========================================================================== */
+
+.subpage {
+  background: #fff;
+}
+
+.page-main {
+  overflow: clip;
+}
+
+.news-row[hidden] {
+  display: none;
+}
+
+.anchor-target {
+  display: block;
+  width: 1px;
+  height: 0;
+  scroll-margin-top: calc(var(--header-h) + 70px);
+}
+
+.page-section[id],
+.page-cta[id],
+.about-video[id],
+.service-family-card[id],
+.solution-hub-card[id] {
+  scroll-margin-top: calc(var(--header-h) + 72px);
+}
+
+.subpage .site-header {
+  background: rgba(255, 255, 255, .98);
+}
+
+.subpage .primary-nav .nav-item.is-active > .nav-link {
+  color: var(--red);
+}
+

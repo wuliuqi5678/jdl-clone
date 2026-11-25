@@ -1,0 +1,66 @@
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 4px 13px;
+  transition: transform .22s var(--ease);
+}
+
+.quick-link:hover {
+  transform: translateY(-2px);
+}
+
+.quick-link__icon {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1134px 54px;
+  transition: transform .25s var(--ease);
+}
+
+.quick-link:hover .quick-link__icon {
+  transform: scale(1.05);
+}
+
+.quick-link__icon--send {
+  background-image: url("../../assets/icons/quick-send.png");
+}
+
+.quick-link__icon--aging {
+  background-image: url("../../assets/icons/quick-aging.png");
+}
+
+.quick-link__icon--range {
+  background-image: url("../../assets/icons/quick-range.png");
+}
+
+.quick-link__icon--network {
+  background-image: url("../../assets/icons/quick-network.png");
+}
+
+.quick-link__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: #303238;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.quick-link__text small {
+  margin-top: 4px;
+  color: #5f626a;
+  font-size: 9.5px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-link:hover .quick-link__text {
+  color: var(--red);
+}
+

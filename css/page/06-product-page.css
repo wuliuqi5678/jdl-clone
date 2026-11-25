@@ -1,0 +1,221 @@
+/* --------------------------------------------------------------------------
+   Product detail page
+   -------------------------------------------------------------------------- */
+
+.product-hero {
+  padding: 41px 0 54px;
+  background:
+    radial-gradient(ellipse at 80% 15%, rgba(225, 37, 27, .055), transparent 34%),
+    linear-gradient(140deg, #f7f8fa 0%, #fbfbfc 60%, #f3f5f7 100%);
+  border-bottom: 1px solid #f0f1f4;
+}
+
+.product-hero__panel {
+  display: grid;
+  grid-template-columns: 1.06fr .94fr;
+  align-items: stretch;
+  gap: 47px;
+  padding: 25px;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid #fff;
+  border-radius: 17px;
+  box-shadow: 0 18px 50px rgba(22, 27, 39, .065);
+}
+
+.product-hero__media {
+  position: relative;
+  overflow: hidden;
+  min-height: 306px;
+  border-radius: 10px;
+  background: #e9ebef;
+}
+
+.product-hero__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 306px;
+  object-fit: cover;
+}
+
+.product-hero__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 13px 17px 13px 2px;
+}
+
+.product-hero__content h1 {
+  color: #1d1f24;
+  font-size: clamp(31px, 2.7vw, 40px);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -.5px;
+}
+
+.product-hero__content > p {
+  max-width: 430px;
+  margin-top: 11px;
+  color: #777b84;
+  font-size: 12.5px;
+  line-height: 1.85;
+}
+
+.product-hero__content .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 17px;
+}
+
+.product-hero__content .page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.product-hero__note {
+  margin-top: 17px;
+  color: var(--muted-light);
+  font-size: 10px;
+}
+
+.spec-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 26px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 11px;
+}
+
+.spec-item {
+  padding: 16px 20px;
+  border-right: 1px solid #edeef2;
+}
+
+.spec-item:last-child {
+  border-right: 0;
+}
+
+.spec-item span {
+  display: block;
+  color: var(--muted-light);
+  font-size: 9.5px;
+}
+
+.spec-item strong {
+  display: block;
+  margin-top: 3px;
+  color: #3e4148;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+  gap: 55px;
+  align-items: start;
+  margin-top: 35px;
+}
+
+.info-list {
+  border-top: 1px solid #eef0f4;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  padding: 21px 0 20px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.info-row__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: #fff5f3;
+  border: 1px solid #fee4e1;
+  border-radius: 50%;
+}
+
+.info-row__icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.info-row__icon .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--red);
+}
+
+.info-row h3 {
+  color: #35373d;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.info-row p {
+  margin-top: 4px;
+  color: var(--muted-light);
+  font-size: 11.5px;
+  line-height: 1.8;
+}
+
+.info-aside {
+  padding: 26px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(225, 37, 27, .08), transparent 38%),
+    #f8f8fa;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+.info-aside__eyebrow {
+  color: var(--red);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.info-aside h3 {
+  margin-top: 10px;
+  color: #303239;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.info-aside p {
+  margin-top: 9px;
+  color: var(--muted-light);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.info-aside .btn {
+  width: 100%;
+  margin-top: 18px;
+  min-height: 39px;
+  font-size: 11px;
+}
+
+.price-note {
+  margin-top: 12px;
+  padding: 12px 13px;
+  color: var(--muted-light);
+  background: #fff;
+  border: 1px dashed #e2e4e9;
+  border-radius: 7px;
+  font-size: 9.5px;
+  line-height: 1.7;
+}
+

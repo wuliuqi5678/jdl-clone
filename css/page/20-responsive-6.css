@@ -1,0 +1,74 @@
+@media (max-width: 390px) {
+  .page-hero h1,
+.page-hero .page-hero__title {
+    font-size: 27px;
+  }
+
+  .page-section {
+    padding: 38px 0;
+  }
+
+  .adv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adv-card {
+    min-height: 164px;
+  }
+
+  .matrix-grid {
+    gap: 7px;
+  }
+
+  .product-hero__content h1 {
+    font-size: 25px;
+  }
+
+  .service-family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-family-card {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 11px;
+    padding: 15px 13px;
+  }
+
+  .service-family-card__icon {
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .service-family-card h3 {
+    align-self: end;
+  }
+
+  .service-family-card p {
+    margin-top: 2px;
+    font-size: 9px;
+  }
+
+  .service-family-card .link-arrow {
+    display: none;
+  }
+
+  .news-row {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .sustain-card {
+    min-height: 145px;
+  }
+
+  .sustain-card__content p {
+    display: none;
+  }
+
+  .timeline-year {
+    flex-basis: 30px;
+  }
+}

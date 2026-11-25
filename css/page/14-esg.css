@@ -1,0 +1,136 @@
+/* --------------------------------------------------------------------------
+   ESG page
+   -------------------------------------------------------------------------- */
+
+.esg-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.esg-stat {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 9px;
+}
+
+.esg-stat strong {
+  display: block;
+  color: #2c7a59;
+  font-family: "DIN Alternate", "Bahnschrift", var(--font);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.esg-stat span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted-light);
+  font-size: 9.5px;
+}
+
+.esg-action-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 31px;
+}
+
+.esg-action {
+  position: relative;
+  min-height: 235px;
+  overflow: hidden;
+  color: #fff;
+  background: #1e2d27;
+  border-radius: 9px;
+  isolation: isolate;
+}
+
+.esg-action:first-child {
+  min-height: 300px;
+  grid-row: span 2;
+}
+
+.esg-action img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s var(--ease);
+}
+
+.esg-action:hover img {
+  transform: scale(1.04);
+}
+
+.esg-action::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 28, 22, .86), rgba(10, 28, 22, .04) 65%);
+}
+
+.esg-action__content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 20px;
+}
+
+.esg-action__content span {
+  color: rgba(255, 255, 255, .75);
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+.esg-action__content h3 {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.esg-action__content p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, .6);
+  font-size: 9.5px;
+  line-height: 1.7;
+}
+
+.report-list {
+  display: grid;
+  gap: 0;
+  margin-top: 27px;
+  border-top: 1px solid #eef0f4;
+}
+
+.report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.report-row__title {
+  color: #4d5058;
+  font-size: 12px;
+}
+
+.report-row__meta {
+  color: var(--muted-light);
+  font-size: 9.5px;
+}
+
+.report-row__link {
+  color: var(--red);
+  font-size: 10px;
+}
+

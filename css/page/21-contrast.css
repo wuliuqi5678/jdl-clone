@@ -1,0 +1,30 @@
+/* --------------------------------------------------------------------------
+   WCAG AA accent text contrast
+   -------------------------------------------------------------------------- */
+
+.section-pill {
+  color: var(--red-text);
+}
+
+.filter-btn:hover,
+.filter-btn.is-active {
+  color: var(--red-text);
+}
+
+.timeline-year:hover,
+.timeline-year.is-active {
+  color: var(--red-text);
+}
+
+.step-card__num {
+  color: #c6261d;
+}.article-excerpt,
+.about-text p {
+  color: var(--muted-light);
+}
+
+#timelineYear {
+  color: var(--red-text);
+}.article-stats strong {
+  color: #c91d14;
+}

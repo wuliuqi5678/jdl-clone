@@ -1,0 +1,26 @@
+/* --------------------------------------------------------------------------
+   Scroll reveal
+   -------------------------------------------------------------------------- */
+
+.will-reveal {
+  transform: translateY(16px);
+  transition: transform .65s var(--ease);
+}
+
+.will-reveal.is-visible {
+  transform: none;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(225, 37, 27, .06); }
+  50% { box-shadow: 0 0 0 9px rgba(225, 37, 27, .11); }
+}
+

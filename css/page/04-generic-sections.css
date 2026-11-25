@@ -1,0 +1,122 @@
+/* --------------------------------------------------------------------------
+   Generic sections / cards
+   -------------------------------------------------------------------------- */
+
+.page-section {
+  position: relative;
+  padding: 75px 0;
+}
+
+.page-section--soft {
+  background:
+    radial-gradient(circle at 4% 7%, rgba(225, 37, 27, .025), transparent 24%),
+    #f5f6f9;
+}
+
+.page-section--tight {
+  padding: 49px 0;
+}
+
+.page-section--last {
+  padding-bottom: 82px;
+}
+
+.page-section .section-heading {
+  margin-bottom: 12px;
+}
+
+.page-section__head {
+  max-width: 760px;
+  margin: 0 auto 37px;
+  text-align: center;
+}
+
+.page-section__head .section-subheading {
+  margin-top: 10px;
+}
+
+.section-heading--left {
+  justify-content: flex-start;
+}
+
+.section-heading--left h2 {
+  text-align: left;
+}
+
+.page-section__head--left {
+  max-width: none;
+  margin-inline: 0;
+  text-align: left;
+}
+
+.page-section__head--left .section-subheading {
+  text-align: left;
+}
+
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 11px;
+  padding: 4px 9px;
+  color: var(--red);
+  background: rgba(225, 37, 27, .055);
+  border: 1px solid rgba(225, 37, 27, .1);
+  border-radius: 100px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: .7px;
+}
+
+.section-pill::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.page-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  padding: 0 8px;
+  color: #b52d24;
+  background: var(--surface-tint);
+  border: 1px solid #f5d6d2;
+  border-radius: 3px;
+  font-size: 9.5px;
+}
+
+.lead-text {
+  color: #737780;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.page-card {
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  box-shadow: 0 9px 28px rgba(29, 33, 45, .04);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.link-arrow .icon {
+  width: 13px;
+  height: 13px;
+  transition: transform .2s ease;
+}
+
+.link-arrow:hover .icon {
+  transform: translateX(3px);
+}
+

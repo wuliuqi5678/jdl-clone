@@ -1,0 +1,382 @@
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .24s ease;
+}
+
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 17, 22, .58);
+  backdrop-filter: blur(4px);
+}
+
+.modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 44px);
+  padding: 36px 36px 31px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(11, 13, 18, .26);
+  opacity: 0;
+  transform: translateY(14px) scale(.985);
+  transition: opacity .25s ease, transform .32s var(--ease);
+}
+
+.modal.is-open .modal__dialog {
+  opacity: 1;
+  transform: none;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  color: #7d7f87;
+  background: #f5f6f8;
+  border-radius: 50%;
+  transition: color .2s ease, background .2s ease;
+}
+
+.modal__close:hover {
+  color: var(--ink);
+  background: #ebedf1;
+}
+
+.modal__close .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.modal__eyebrow {
+  margin-bottom: 9px;
+  color: var(--red);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.modal__dialog h2 {
+  color: #1b1c21;
+  font-size: 27px;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -.3px;
+}
+
+.modal__lead {
+  margin-top: 8px;
+  color: #5f626a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.modal__lead span {
+  color: #5f626a;
+}
+
+.modal__dialog--track {
+  width: min(590px, 100%);
+}
+
+.track-result {
+  margin-top: 21px;
+  padding: 18px;
+  background: #f8f8fa;
+  border: 1px solid #eff0f3;
+  border-radius: 10px;
+}
+
+.track-result__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #eaebef;
+}
+
+.track-result__head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.track-result__head span:first-child {
+  color: #5f626a;
+  font-size: 10px;
+}
+
+.track-result__head strong {
+  color: #33353b;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+.status-pill {
+  padding: 4px 9px;
+  color: var(--red);
+  background: rgba(225, 37, 27, .07);
+  border: 1px solid rgba(225, 37, 27, .14);
+  border-radius: 100px;
+  font-size: 10px;
+}
+
+.track-result__route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaebef;
+}
+
+.track-result__route > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.track-result__route > div:last-child {
+  text-align: right;
+}
+
+.track-result__route span {
+  color: #5f626a;
+  font-size: 9px;
+}
+
+.track-result__route strong {
+  color: #484b53;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.track-result__route > .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--red);
+}
+
+.timeline {
+  padding-top: 15px;
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 14px;
+  color: #5f626a;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: -2px;
+  left: 4px;
+  width: 1px;
+  background: #e1e2e7;
+}
+
+.timeline li:last-child::before {
+  display: none;
+}
+
+.timeline__dot {
+  position: relative;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+  background: #d3d5da;
+  border: 2px solid #f8f8fa;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #d3d5da;
+}
+
+.timeline li.is-current .timeline__dot {
+  background: var(--red);
+  box-shadow: 0 0 0 1px var(--red), 0 0 0 4px rgba(225, 37, 27, .1);
+}
+
+.timeline li > div {
+  flex: 1;
+}
+
+.timeline strong {
+  display: block;
+  color: #5c5f67;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.timeline li.is-current strong {
+  color: var(--red);
+}
+
+.timeline p {
+  margin-top: 1px;
+  color: #5f626a;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.timeline time {
+  display: block;
+  margin-top: 3px;
+  color: #5f626a;
+  font-size: 9px;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 19px;
+}
+
+.modal__dialog--login,
+.modal__dialog--consult {
+  width: min(470px, 100%);
+}
+
+.field {
+  display: block;
+  margin-top: 15px;
+}
+
+.field > span:first-child {
+  display: block;
+  margin-bottom: 6px;
+  color: #5e6169;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.field > span small {
+  color: #5f626a;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 12px;
+  color: #292b30;
+  background: #fafafb;
+  border: 1px solid #e5e6ea;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: 0;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #5f626a;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  background: #fff;
+  border-color: rgba(225, 37, 27, .5);
+  box-shadow: 0 0 0 3px rgba(225, 37, 27, .06);
+}
+
+.field__row {
+  display: flex;
+  gap: 8px;
+}
+
+.field__row input {
+  flex: 1;
+}
+
+.code-btn {
+  flex: 0 0 96px;
+  min-height: 43px;
+  color: var(--red);
+  background: #fff5f4;
+  border: 1px solid #f7d9d6;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+.code-btn:disabled {
+  color: #5f626a;
+  background: #f5f6f8;
+  border-color: #e9eaed;
+  cursor: default;
+}
+
+.btn--block {
+  width: 100%;
+  min-height: 45px;
+  margin-top: 18px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.form-message {
+  min-height: 17px;
+  margin-top: 8px;
+  color: var(--red);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.form-message.is-success {
+  color: #218a4c;
+}
+
+.form-legal {
+  margin-top: 13px;
+  color: #5f626a;
+  font-size: 9px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
